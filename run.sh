@@ -1,0 +1,5 @@
+# python -m src.trainer.supervised glaucoma_model compiled_file_addr/REFUGE1_crop.csv --lr 1e-3 --epochs 100 --batch_size 32 --optimizer adam --loss cross_entropy --device 0
+# python -m src.trainer.supervised resnet50 compiled_file_addr/REFUGE1_crop.csv --lr 1e-4 --epochs 100 --batch_size 16 --optimizer adam --loss cross_entropy --device 0
+# python -m src.trainer.supervised resnet50 compiled_file_addr/ACRIMA_REFUGE_crop.csv --lr 1e-4 --epochs 50 --batch_size 16 --optimizer adam --loss cross_entropy --device 0
+# python -m src.trainer.mae mae compiled_file_addr/ACRIMA_REFUGE_crop.csv --lr 1e-4 --epochs 50 --batch_size 32 --optimizer adam --loss mse --device 0
+python -m src.trainer.mae mae_linearprobing compiled_file_addr/REFUGE1_crop.csv --lr 1e-4 --epochs 50 --batch_size 32 --optimizer adam --loss cross_entropy --device 0
